@@ -1,0 +1,17 @@
+import pandas as pd
+import pylab as pl
+import numpy as np
+import scipy.optimize as opt
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+%matplotlib inline 
+import matplotlib.pyplot as plt
+
+#After load data and data prepoccess...
+
+from sklearn import svm
+clf = svm.SVC(kernel='rbf')
+clf.fit(X_train, y_train) 
+
+yhat = clf.predict(X_test)
+yhat [0:5]
